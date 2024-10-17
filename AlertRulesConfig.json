@@ -1,0 +1,52 @@
+[
+  {
+    "Description": "NetLastSeen is blank AND LastSeen is less than 5 days from today.",
+    "LogicalOperator": "AND",
+    "Conditions": [
+      {
+        "PropertyName": "NetLastSeen",
+        "ComparisonType": "Equals",
+        "ComparisonValue": ""
+      },
+      {
+        "PropertyName": "LastSeen",
+        "ComparisonType": "DateGreaterThan",
+        "ComparisonValue": "5"
+      }
+    ],
+    "AlertColor": "Teal",
+    "Severity": 1
+  },
+  {
+    "Description": "Last MDM check-in greater than 5 days.",
+    "PropertyName": "LastSeen",
+    "ComparisonType": "DateGreaterThan",
+    "ComparisonValue": "5",
+    "AlertColor": "Yellow",
+    "Severity": 1
+  },
+  {
+    "Description": "Device is offline.",
+    "PropertyName": "IsOnline",
+    "ComparisonType": "Equals",
+    "ComparisonValue": "false",
+    "AlertColor": "Red",
+    "Severity": 1
+  },
+  {
+    "Description": "Spoofed MAC Address On Network.",
+    "PropertyName": "NetLastSeen",
+    "ComparisonType": "Equals",
+    "ComparisonValue": "",
+    "AlertColor": "Blue",
+    "Severity": 1
+  },
+  {
+    "Description": "Battery Level Less Than 25%.",
+    "PropertyName": "BatteryLevel",
+    "ComparisonType": "LessThan",
+    "ComparisonValue": "25",
+    "AlertColor": "Orange",
+    "Severity": 1
+  }
+]
